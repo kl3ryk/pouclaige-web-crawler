@@ -1,21 +1,40 @@
 {
-    "name": "Crawler",
-    "version": "0.0.0",
-    "description": "",
-    "main": "App.js",
-    "dependencies": {
-        "jquery": "~1.8.3",
-        "jquerygo": "~0.0.9",
-        "pouclaige-configuration-processor": "~1",
-        "request": "~2.30.0",
-        "sequelize": "~2.0.0-beta.2",
-        "underscore": "~1",
-        "zombie": "~2.0.0-alpha24"
-    },
-    "devDependencies": {},
+    "author": "Paweł Łaskarzewski <pawel@absolvent.pl>",
+    "maintainers": [
+        "Mateusz Charytoniuk <mateusz.charyotniuk@gmail.com>"
+    ],
+    "name": "pouclaige-web-scanner",
+    "version": "1.0.0",
+    "main": "node_libs/pouclaige-web-scanner/index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "grunt test"
     },
-    "author": "",
-    "license": "ISC"
+    "dependencies": {
+        "flow-inspector": "~1",
+        "jquery": "~1",
+        "jquerygo": "~0",
+        "pouclaige-configuration-processor": "~1",
+        "request": "~2",
+        "sequelize": "~2",
+        "underscore": "~1",
+        "zombie": "~2"
+    },
+    "devDependencies": {
+        "grunt": "~0.4",
+        "grunt-contrib-clean": "~0.5",
+        "grunt-contrib-jshint": "~0.6",
+        "grunt-contrib-watch": "~0.5",
+        "grunt-istanbul": "~0.2",
+        "grunt-jsbeautifier": "~0.2",
+        "grunt-mocha-test": "~0.6",
+        "istanbul": "~0.1",
+        "mocha": "~1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pouclaige/pouclaige-web-scanner"
+    },
+    "engines": {
+        "node": ">=0.8"
+    }
 }

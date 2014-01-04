@@ -1,3 +1,10 @@
+/**
+ * @license Copyright (c) 2014 Pouclaige
+ * For licensing, see LICENSE
+ */
+
+"use strict";
+
 exports.options = {
     urlList: "http://www.auchan.pl/praca/lista-ofert-pracy",
     urlRowSelector: ".offers tr:nth-child(n+2)",

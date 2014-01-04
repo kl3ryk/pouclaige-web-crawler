@@ -1,7 +1,14 @@
+/**
+ * @license Copyright (c) 2014 Pouclaige
+ * For licensing, see LICENSE
+ */
+
+"use strict";
+
 exports.options = {
-    urlList: "http://marketdino.startpraca.pl/offers/centrala/",
-    urlRowSelector: ".job_offers tr:nth-child(n+2)",
-    baseUrl: "http://marketdino.startpraca.pl"
+    urlList: "http://www.selgros.pl/oferty-pracy",
+    urlRowSelector: ".job_offert tbody tr",
+    baseUrl: "http://www.selgros.pl"
 };
 
 exports.preParsers = [
@@ -23,7 +30,7 @@ exports.preParsers = [
         }
     },
     {
-        name: "voivodship",
+        name: "finish",
         selector: "td:nth(1)",
     },
     {
@@ -35,9 +42,19 @@ exports.preParsers = [
 exports.postParsers = [
     {
         name: "content",
-        selector: "#content_www",
+        selector: "#sv-vacancy",
         callback: function(offer, options, $item) {
             return $item.html().trim();
+        }
+    },
+    {
+        name: "accept",
+        callback: function(offer, options, $item) {
+            if (/\b(specjalista|manager)\b/gi.exec(offer.title)){
+                return false;
+            } else {
+                return true;
+            }
         }
     }
 ];

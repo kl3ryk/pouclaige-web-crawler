@@ -1,15 +1,8 @@
-lib-cov
-*.seed
+# automatically generated files
 *.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
 
-pids
-logs
-results
+# code coverage reports
+/coverage
 
-npm-debug.log
-node_modules
+# vendor libraries
+/node_modules
