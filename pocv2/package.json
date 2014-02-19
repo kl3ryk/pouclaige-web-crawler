@@ -1,0 +1,24 @@
+{
+    "name": "Crawler",
+    "version": "0.1.0",
+    "description": "PoC Crawler",
+    "main": "App.js",
+    "dependencies": {
+        "cheerio": "~0",
+        "mysql": "~2",
+        "natural": "~0",
+        "node-phantom-simple": "~1",
+        "pouclaige-configuration-processor": "~1",
+        "pouclaige-flow-inspector": "~1",
+        "request": "~2",
+        "sanitize-html": "~1",
+        "sequelize": "~2.0.0-dev.2",
+        "slug": "~0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Paweł Łaskarzewski <kl3ryk@gmail.com>",
+    "license": "ISC"
+}
